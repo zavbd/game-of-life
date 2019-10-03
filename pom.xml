@@ -422,6 +422,29 @@
             <reporting>
                 <plugins>
                     <plugin>
+                        <groupId>org.openclover</groupId>
+                        <artifactId>clover-maven-plugin</artifactId>
+                        <version>4.3.1</version>
+                        <configuration>
+                            <targetPercentage>50%</targetPercentage>
+                            <failOnViolation>true</failOnViolation>
+                            <generateHtml>true</generateHtml>
+                            <generateXml>true</generateXml>
+                            <executions>
+                                <execution>
+                                    <id>check</id>
+                                    <phase>verify</phase>
+                                    <goals>
+                                        <goal>instrument-test</goal>
+                                        <goal>check</goal>
+                                        <goal>clover</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                        </configuration>
+
+                    </plugin>
+                    <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>cobertura-maven-plugin</artifactId>
                         <version>${cobertura.version}</version>
