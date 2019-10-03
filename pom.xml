@@ -424,47 +424,14 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>cobertura-maven-plugin</artifactId>
-                        <version>2.6</version>
+                        <version>${cobertura.version}</version>
                         <configuration>
-                            <executions>
-                                <execution>
-                                    <phase>package</phase>
-                                    <goals>
-                                        <goal>cobertura</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
+                            <formats>
+                                <format>html</format>
+                                <format>xml</format>
+                            </formats>
                         </configuration>
                     </plugin>
-<!--                    <plugin>-->
-<!--                        <groupId>org.apache.maven.plugins</groupId>-->
-<!--                        <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--                        <version>2.14</version>-->
-<!--                    </plugin>-->
-<!--                    <plugin>-->
-<!--                        <groupId>org.codehaus.mojo</groupId>-->
-<!--                        <artifactId>findbugs-maven-plugin</artifactId>-->
-<!--                        <version>3.0.0</version>-->
-<!--                        <executions>-->
-<!--                            <execution>-->
-<!--                                <phase>compile</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>findbugs</goal>-->
-<!--                                </goals>-->
-<!--                            </execution>-->
-<!--                        </executions>-->
-<!--                    </plugin>-->
-<!--                    <plugin>-->
-<!--                        <groupId>org.codehaus.mojo</groupId>-->
-<!--                        <artifactId>cobertura-maven-plugin</artifactId>-->
-<!--                        <version>${cobertura.version}</version>-->
-<!--                        <configuration>-->
-<!--                            <formats>-->
-<!--                                <format>html</format>-->
-<!--                                <format>xml</format>-->
-<!--                            </formats>-->
-<!--                        </configuration>-->
-<!--                    </plugin>-->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-pmd-plugin</artifactId>
