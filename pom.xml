@@ -430,14 +430,6 @@
                                 <format>html</format>
                                 <format>xml</format>
                             </formats>
-                            <executions>
-                                <execution>
-                                    <phase>package</phase>
-                                    <goals>
-                                        <goal>cobertura</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
                         </configuration>
                     </plugin>
                     <plugin>
